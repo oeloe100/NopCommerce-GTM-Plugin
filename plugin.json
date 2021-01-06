@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "Google Tag Manager",
+  "SystemName": "Widgets.GoogleTagManager",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.30" ],
+  "Author": "Anton Rashchenko",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.GoogleTagManager.dll",
+  "Description": "This is an implementation of google tag manager for nopcommerce"
+}

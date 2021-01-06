@@ -1,0 +1,6 @@
+﻿@model string
+@Html.Raw(Model)
+
+@{ 
+    Html.AddScriptParts(ResourceLocation.Head, "~/Plugins/Widgets.GoogleTagManager/Scripts/tracker.google.gtm.js");
+}

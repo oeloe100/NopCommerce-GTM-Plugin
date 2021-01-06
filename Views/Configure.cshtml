@@ -1,0 +1,43 @@
+﻿@model Nop.Plugin.Widgets.GoogleTagManager.Models.ConfigurationModel
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+@await Component.InvokeAsync("StoreScopeConfiguration")
+
+<form asp-controller="WidgetsGoogleTagManager" asp-action="Configure" method="post">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="HeadSnippet_OverrideForStore" asp-input="HeadSnippet" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="HeadSnippet" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="HeadSnippet" />
+                        <span asp-validation-for="HeadSnippet"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="BodySnippet_OverrideForStore" asp-input="BodySnippet" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="BodySnippet" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="BodySnippet" />
+                        <span asp-validation-for="BodySnippet"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-9">
+                        <input type="submit" name="save" class="btn bg-blue" value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
